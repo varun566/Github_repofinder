@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Repo Finder</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .loader {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 9999;
+        }
+
+        /* Pagination Styles */
+        .pagination-btn {
+            padding: 8px 16px;
+            margin: 0 4px;
+            background-color: #007bff;
+            color: #fff;
+            border: 1px solid #007bff;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .pagination-btn:hover {
+            background-color: #0056b3;
+        }
+
+        .pagination-count {
+            font-weight: bold;
+            margin: 0 6px;
+        }
+
+        .pagination-separator {
+            margin: 0 6px;
+        }
+
+        .pagination-total {
+            margin: 0 6px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="text-center mb-5">GitHub Repo Finder</h1>
+        <form id="repo-form">
+            <label for="username">Enter a GitHub username:</label>
+            <input type="text" id="username" name="username" />
+            <button type="submit">Find Repos</button>
+        </form>
+        <div id="repos"></div>
+        <table class="table table-striped ">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Stars</th>
+                    <th>Forks</th>
+                </tr>
+            </thead>
+            <tbody id="repositoryList"></tbody>
+        </table>
+        <div class="d-flex justify-content-center">
+            <nav aria-label="Page navigation example">
+                <ul class="pagination" id="pagination"></ul>
+            </nav>
+        </div>
+        <div class="d-flex justify-content-center mt-3">
+            <button class="pagination-btn older" id="olderBtn">Older</button>
+            <span class="pagination-count" id="currentPage">1</span>
+            <span class="pagination-separator">/</span>
+            <span class="pagination-total" id="totalPages">1</span>
+            <button class="pagination-btn newer" id="newerBtn">Newer</button>
+        </div>
+    </div>
+    <div id="loader" class="loader">
+        <div class="spinner-border text-primary" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
