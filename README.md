@@ -9,9 +9,7 @@ GitHub Repo Finder is a web application that allows users to search for reposito
 - [Features](#features)
 - [Technologies Used](#technologies-used)
 - [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
+
 
 ## Demo
 - Loaders ![image](https://github.com/varun566/Github_repofinder/assets/71657704/fa95563b-2d05-4de9-aebb-efea00e03152)
