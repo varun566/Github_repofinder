@@ -21,6 +21,7 @@ GitHub Repo Finder is a web application that allows users to search for reposito
 - Search for GitHub repositories by username.
 - Display repository details, including name, description, stars, and forks.
 - Pagination for easy navigation through the list of repositories.
+- Loaders are displayed when it is progress
 
 ## Technologies Used
 
